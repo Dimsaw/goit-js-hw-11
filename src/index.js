@@ -8,6 +8,7 @@ const axios = require('axios').default;
 
 import cardOfImage from '../src/templates/articles.hbs';
 import NewPixabayAPI from './js/pixabay';
+import style from '../src/css/style.css';
 
 import { input, gallery } from './js/refs';
 import LoadMoreBtn from '../src/js/btn';
