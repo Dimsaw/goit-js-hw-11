@@ -5,7 +5,7 @@ import Notiflix from 'notiflix';
 import LoadMoreBtn from '../js/btn';
 const loadMoreBtn = new LoadMoreBtn({ selector: '[data-action="load-more"]', hidden: true });
 
-const API_KEY = '24760399-090abf7dadf4273caa09f36f4';
+const API_KEY = '24793371-9eea329880a97afb5c057777f';
 const BASE_URL = 'https://pixabay.com/api/';
 
 export default class NewPixabayAPI {
