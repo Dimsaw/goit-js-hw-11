@@ -28,10 +28,13 @@ img {
 .input-form {
   padding: 10px;
   font-size: 30px;
+  border-radius: 8px;
 }
 
 .submit {
   min-width: 150px;
+  border-radius: 8px;
+  margin-left: 20px;
 }
 
 .button.is-hidden {
@@ -53,6 +56,7 @@ img {
   background-color: #f6f6f6;
   border-radius: 8px;
   color: black;
+  margin-bottom: 25px;
 }
 .gallery {
   display: grid;
