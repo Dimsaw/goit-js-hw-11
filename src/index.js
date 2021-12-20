@@ -6,10 +6,6 @@ import NewPixabayAPI from './js/pixabay';
 import { input, gallery } from './js/refs';
 import LoadMoreBtn from '../src/js/btn';
 
-// Описан в документации
-import SimpleLightbox from 'simplelightbox';
-// Дополнительный импорт стилей
-import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
 // import axios from 'axios';
 const axios = require('axios').default;
