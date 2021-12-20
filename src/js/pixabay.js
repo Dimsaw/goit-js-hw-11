@@ -1,5 +1,10 @@
 const axios = require('axios').default;
 
+import Notiflix from 'notiflix';
+
+import LoadMoreBtn from '../js/btn';
+const loadMoreBtn = new LoadMoreBtn({ selector: '[data-action="load-more"]', hidden: true });
+
 const API_KEY = '24793371-9eea329880a97afb5c057777f';
 const BASE_URL = 'https://pixabay.com/api/';
 
@@ -10,6 +15,7 @@ export default class NewPixabayAPI {
   }
 
   async fetchArticles() {
+    console.log(this);
     const option = {
       params: {
         key: API_KEY,
@@ -27,9 +33,19 @@ export default class NewPixabayAPI {
 
       this.incrementPage();
       const result = image.data;
+      console.log(result);
       return result;
     } catch (error) {
       console.error(error);
+    }
+  }
+
+  endImages() {
+    if (this.page === 3) {
+      console.log('finish');
+      loadMoreBtn.hide();
+
+      Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
     }
   }
 

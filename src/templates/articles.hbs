@@ -1,18 +1,18 @@
 {{#each hits}}
 <div class="photo-card">
-    <img src="{{webformatURL}}" alt="{{tags}}" loading="lazy" width="200px" />
+    <img src="{{webformatURL}}" alt="{{tags}}" loading="lazy"  />
     <div class="info">
         <p class="info-item">
-            <b>Likes: {{likes}}</b>
+            <span class="text">Likes</span> <span class="numbers">{{likes}}</span>
         </p>
         <p class="info-item">
-            <b>Views: {{views}}</b>
+            <span class="text">Views</span>  <span class="numbers">{{views}}</span>
         </p>
         <p class="info-item">
-            <b>Comments: {{comments}}</b>
+            <span class="text">Comments</span> <span class="numbers">{{comments}}</span>
         </p>
         <p class="info-item">
-            <b>Downloads: {{downloads}}</b>
+            <span class="text">Downloads</span> <span class="numbers">{{downloads}}</span>
         </p>
     </div>
 </div>
