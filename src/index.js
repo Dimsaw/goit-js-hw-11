@@ -1,3 +1,4 @@
+import './css/style.css';
 // Описан в документации
 import SimpleLightbox from 'simplelightbox';
 // Дополнительный импорт стилей
@@ -8,7 +9,6 @@ const axios = require('axios').default;
 
 import cardOfImage from '../src/templates/articles.hbs';
 import NewPixabayAPI from './js/pixabay';
-import './css/style.css';
 
 import { input, gallery } from './js/refs';
 import LoadMoreBtn from '../src/js/btn';
