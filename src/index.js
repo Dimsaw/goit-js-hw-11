@@ -1,4 +1,11 @@
 import './css/style.css';
+
+import cardOfImage from '../src/templates/articles.hbs';
+import NewPixabayAPI from './js/pixabay';
+
+import { input, gallery } from './js/refs';
+import LoadMoreBtn from '../src/js/btn';
+
 // Описан в документации
 import SimpleLightbox from 'simplelightbox';
 // Дополнительный импорт стилей
@@ -6,12 +13,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
 // import axios from 'axios';
 const axios = require('axios').default;
-
-import cardOfImage from '../src/templates/articles.hbs';
-import NewPixabayAPI from './js/pixabay';
-
-import { input, gallery } from './js/refs';
-import LoadMoreBtn from '../src/js/btn';
 
 const loadMoreBtn = new LoadMoreBtn({ selector: '[data-action="load-more"]', hidden: true });
 const pixabayAPI = new NewPixabayAPI();

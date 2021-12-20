@@ -6,7 +6,7 @@ import LoadMoreBtn from '../js/btn';
 const loadMoreBtn = new LoadMoreBtn({ selector: '[data-action="load-more"]', hidden: true });
 
 const API_KEY = '24793371-9eea329880a97afb5c057777f';
-const BASE_URL = 'https://pixabay.com/api/';
+const BASE_URL = `https://pixabay.com/api/`;
 
 export default class NewPixabayAPI {
   constructor() {
