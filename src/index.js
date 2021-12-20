@@ -30,8 +30,6 @@ async function sumbitForm(e) {
   loadMoreBtn.show();
   loadMoreBtn.disable();
 
-  //   console.log(pixabayAPI.searchQuery);
-
   if (pixabayAPI.searchQuery !== '') {
     const image = await pixabayAPI.fetchArticles();
     renderImages(image);
@@ -43,7 +41,7 @@ async function sumbitForm(e) {
     clearContainer();
     loadMoreBtn.hide();
   }
-  var lightbox = new SimpleLightbox('.gallery a', {
+  const galerry = new SimpleLightbox('.gallery a', {
     captionDelay: 250,
   });
 }
@@ -70,4 +68,14 @@ async function loadMoreImages() {
   renderImages(image);
   loadMoreBtn.enable();
   pixabayAPI.endImages();
+  scroll();
+}
+
+function scroll() {
+  const { height: cardHeight } = input.firstElementChild.getBoundingClientRect();
+
+  window.scrollBy({
+    top: cardHeight * 4,
+    behavior: 'smooth',
+  });
 }

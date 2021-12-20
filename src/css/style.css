@@ -50,13 +50,13 @@ img {
   margin-right: auto;
   width: 150px;
   height: 40px;
-  font-size: 13px;
+  font-size: 15px;
   padding: 6px 0 4px 10px;
   border: 1px solid #cecece;
   background-color: #f6f6f6;
   border-radius: 8px;
   color: black;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 .gallery {
   display: grid;
