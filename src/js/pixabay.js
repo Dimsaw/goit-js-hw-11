@@ -41,7 +41,7 @@ export default class NewPixabayAPI {
   }
 
   endImages() {
-    if (this.page === 3) {
+    if (this.page === 14) {
       console.log('finish');
       loadMoreBtn.hide();
 

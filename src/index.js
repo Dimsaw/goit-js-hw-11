@@ -10,6 +10,11 @@ import Notiflix from 'notiflix';
 // import axios from 'axios';
 const axios = require('axios').default;
 
+// Описан в документации
+import SimpleLightbox from 'simplelightbox';
+// Дополнительный импорт стилей
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 const loadMoreBtn = new LoadMoreBtn({ selector: '[data-action="load-more"]', hidden: true });
 const pixabayAPI = new NewPixabayAPI();
 
@@ -38,6 +43,9 @@ async function sumbitForm(e) {
     clearContainer();
     loadMoreBtn.hide();
   }
+  var lightbox = new SimpleLightbox('.gallery a', {
+    captionDelay: 250,
+  });
 }
 
 function renderImages(image) {
