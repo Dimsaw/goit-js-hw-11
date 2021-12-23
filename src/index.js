@@ -75,7 +75,7 @@ function scroll() {
   const { height: cardHeight } = input.firstElementChild.getBoundingClientRect();
 
   window.scrollBy({
-    top: cardHeight * 100,
+    top: cardHeight * 3,
     behavior: 'smooth',
   });
 }
