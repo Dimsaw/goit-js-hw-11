@@ -67,7 +67,7 @@ async function loadMoreImages() {
   const image = await pixabayAPI.fetchArticles();
   renderImages(image);
   loadMoreBtn.enable();
-  pixabayAPI.endImages();
+
   scroll();
 }
 
@@ -75,7 +75,7 @@ function scroll() {
   const { height: cardHeight } = input.firstElementChild.getBoundingClientRect();
 
   window.scrollBy({
-    top: cardHeight * 4,
+    top: cardHeight * 100,
     behavior: 'smooth',
   });
 }

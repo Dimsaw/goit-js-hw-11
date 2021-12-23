@@ -36,16 +36,9 @@ export default class NewPixabayAPI {
       console.log(result);
       return result;
     } catch (error) {
-      console.error(error);
-    }
-  }
-
-  endImages() {
-    if (this.page === 14) {
-      console.log('finish');
       loadMoreBtn.hide();
-
       Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
+      console.error(error);
     }
   }
 
