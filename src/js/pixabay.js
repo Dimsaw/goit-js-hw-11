@@ -12,6 +12,8 @@ export default class NewPixabayAPI {
   constructor() {
     this.searchQuery = '';
     this.page = 1;
+
+    this.per_page = 40;
   }
 
   async fetchArticles() {
@@ -31,15 +33,18 @@ export default class NewPixabayAPI {
     try {
       const image = await axios.get(BASE_URL, option);
 
+      const result = await image.data;
+
       this.incrementPage();
-      const result = image.data;
       console.log(result);
       return result;
     } catch (error) {
-      loadMoreBtn.hide();
-      Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
       console.error(error);
     }
+  }
+
+  resetEndOfHits() {
+    this.endOfHits = false;
   }
 
   incrementPage() {
