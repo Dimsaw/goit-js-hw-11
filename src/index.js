@@ -82,7 +82,7 @@ function scroll() {
   const { height: cardHeight } = input.firstElementChild.getBoundingClientRect();
 
   window.scrollBy({
-    top: cardHeight * 100,
+    top: cardHeight * 2,
     behavior: 'smooth',
   });
 }
@@ -90,6 +90,6 @@ function scroll() {
 function finishOfImages(image) {
   if (pixabayAPI.page === 1 + Math.ceil(image.totalHits / pixabayAPI.per_page)) {
     loadMoreBtn.hide();
-    return Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
+    Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
   }
 }
