@@ -41,9 +41,7 @@ async function sumbitForm(e) {
     clearContainer();
     loadMoreBtn.hide();
   }
-  const galerry = new SimpleLightbox('.gallery a', {
-    captionDelay: 250,
-  });
+  simpleLight();
 }
 
 function renderImages(image) {
@@ -74,6 +72,7 @@ async function loadMoreImages() {
   renderImages(image);
   loadMoreBtn.enable();
   scroll();
+  simpleLight();
   finishOfImages(image);
 }
 
@@ -94,4 +93,10 @@ function finishOfImages(image) {
     loadMoreBtn.hide();
     return Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
   }
+}
+
+function simpleLight() {
+  const galerry = new SimpleLightbox('.gallery a', {
+    captionDelay: 250,
+  });
 }
