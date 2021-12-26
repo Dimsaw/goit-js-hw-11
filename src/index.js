@@ -61,7 +61,6 @@ function renderImages(image) {
   } else {
     const markup = cardOfImage(image);
     gallery.insertAdjacentHTML('beforeend', markup);
-    finishOfImages(image);
   }
 }
 
@@ -74,8 +73,8 @@ async function loadMoreImages() {
   const image = await pixabayAPI.fetchArticles();
   renderImages(image);
   loadMoreBtn.enable();
-
   scroll();
+  finishOfImages(image);
 }
 
 function scroll() {
@@ -88,8 +87,11 @@ function scroll() {
 }
 
 function finishOfImages(image) {
-  if (pixabayAPI.page === 1 + Math.ceil(image.totalHits / pixabayAPI.per_page)) {
+  if (
+    pixabayAPI.page === 1 + Math.ceil(image.totalHits / pixabayAPI.per_page) ||
+    (image.hits.length < 40 && image.hits.length >= 1)
+  ) {
     loadMoreBtn.hide();
-    Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
+    return Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
   }
 }
